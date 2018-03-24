@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="300.0" minWidth="600.0" prefHeight="358.0" prefWidth="600.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controller.FindBookController">
+    <children>
+        <Pane minHeight="250.0" minWidth="600.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <FlowPane prefHeight="50.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Название">
+                            <FlowPane.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </FlowPane.margin>
+                        </Label>
+                        <TextField fx:id="titleField" prefHeight="31.0" prefWidth="450.0" promptText="Любое">
+                     <FlowPane.margin>
+                        <Insets left="20.0" />
+                     </FlowPane.margin></TextField>
+                    </children>
+                </FlowPane>
+                <FlowPane columnHalignment="CENTER" layoutY="50.0" prefHeight="50.0" prefWidth="600.0" rowValignment="BASELINE">
+                    <children>
+                        <Label text="Авторы">
+                            <FlowPane.margin>
+                                <Insets bottom="10.0" left="10.0" right="22.0" top="10.0" />
+                            </FlowPane.margin>
+                        </Label>
+                        <TextField fx:id="authorsField" prefHeight="31.0" prefWidth="450.0" promptText="Любые">
+                     <FlowPane.margin>
+                        <Insets left="20.0" />
+                     </FlowPane.margin></TextField>
+                    </children>
+                </FlowPane>
+                <FlowPane layoutY="100.0" prefHeight="50.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Категория">
+                            <FlowPane.margin>
+                                <Insets bottom="10.0" left="10.0" right="13.0" top="10.0" />
+                            </FlowPane.margin>
+                        </Label>
+                        <MenuButton fx:id="categoryButton" mnemonicParsing="false" text="Выбрать категорию">
+                     <FlowPane.margin>
+                        <Insets left="12.0" />
+                     </FlowPane.margin>
+                        </MenuButton>
+                    </children>
+                </FlowPane>
+                <FlowPane columnHalignment="CENTER" layoutY="150.0" prefHeight="50.0" prefWidth="600.0" rowValignment="BASELINE">
+                    <children>
+                        <Label text="Издательство">
+                            <FlowPane.margin>
+                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                            </FlowPane.margin>
+                        </Label>
+                  <MenuButton fx:id="publisherButton" mnemonicParsing="false" text="Выбрать Издательство">
+                     <FlowPane.margin>
+                        <Insets left="2.0" />
+                     </FlowPane.margin>
+                  </MenuButton>
+                    </children>
+                </FlowPane>
+            <FlowPane columnHalignment="CENTER" layoutY="200.0" prefHeight="50.0" prefWidth="600.0" rowValignment="BASELINE">
+               <children>
+                  <Label text="Библиотека">
+                     <FlowPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <MenuButton fx:id="libraryButton" mnemonicParsing="false" text="Выбрать библиотеку">
+                     <FlowPane.margin>
+                        <Insets left="12.0" />
+                     </FlowPane.margin>
+                  </MenuButton>
+               </children>
+            </FlowPane>
+            </children>
+        </Pane>
+        <Button alignment="CENTER" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#resultOnScreen" prefHeight="31.0" prefWidth="552.0" text="Результат на экране" textAlignment="CENTER" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="back" layoutX="165.0" layoutY="298.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" text="Назад" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

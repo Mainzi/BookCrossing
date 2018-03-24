@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Library@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="Library">
+      <ObjectId>17052</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12938</ObjectId>
+    </database>
+    <database id="4" parent="1" name="test">
+      <ObjectId>17053</ObjectId>
+    </database>
+    <schema id="5" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Current>1</Current>
+    </schema>
+    <schema id="6" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="information_schema">
+      <ObjectId>12648</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="library">
+      <ObjectId>17492</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="libraries">
+      <ObjectId>17493</ObjectId>
+      <IntrospectionTimestamp>2017-12-12.11:47:39.963</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1964</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <sequence id="12" parent="11" name="author_author_id_seq">
+      <ObjectId>18020</ObjectId>
+      <StateNumber>1853</StateNumber>
+    </sequence>
+    <sequence id="13" parent="11" name="book_book_id_seq">
+      <ObjectId>18060</ObjectId>
+      <StateNumber>1857</StateNumber>
+    </sequence>
+    <sequence id="14" parent="11" name="category_category_id_seq">
+      <ObjectId>18040</ObjectId>
+      <StateNumber>1855</StateNumber>
+    </sequence>
+    <sequence id="15" parent="11" name="library_library_id_seq">
+      <ObjectId>18050</ObjectId>
+      <StateNumber>1856</StateNumber>
+    </sequence>
+    <sequence id="16" parent="11" name="publisher_publisher_id_seq">
+      <ObjectId>18030</ObjectId>
+      <StateNumber>1854</StateNumber>
+    </sequence>
+    <table id="17" parent="11" name="author">
+      <ObjectId>18022</ObjectId>
+      <StateNumber>1859</StateNumber>
+    </table>
+    <table id="18" parent="11" name="book">
+      <ObjectId>18062</ObjectId>
+      <StateNumber>1860</StateNumber>
+    </table>
+    <table id="19" parent="11" name="book_author">
+      <ObjectId>18093</ObjectId>
+      <StateNumber>1859</StateNumber>
+    </table>
+    <table id="20" parent="11" name="book_category">
+      <ObjectId>18078</ObjectId>
+      <StateNumber>1858</StateNumber>
+    </table>
+    <table id="21" parent="11" name="category">
+      <ObjectId>18042</ObjectId>
+      <StateNumber>1858</StateNumber>
+    </table>
+    <table id="22" parent="11" name="library">
+      <ObjectId>18052</ObjectId>
+      <StateNumber>1860</StateNumber>
+    </table>
+    <table id="23" parent="11" name="library_book">
+      <ObjectId>18108</ObjectId>
+      <StateNumber>1860</StateNumber>
+    </table>
+    <table id="24" parent="11" name="publisher">
+      <ObjectId>18032</ObjectId>
+      <StateNumber>1857</StateNumber>
+    </table>
+    <view id="25" parent="11" name="get_authors">
+      <ObjectId>18138</ObjectId>
+      <StateNumber>1961</StateNumber>
+    </view>
+    <view id="26" parent="11" name="get_books_in_library">
+      <ObjectId>18142</ObjectId>
+      <StateNumber>1962</StateNumber>
+    </view>
+    <view id="27" parent="11" name="get_books_number_in_category">
+      <ObjectId>18146</ObjectId>
+      <StateNumber>1963</StateNumber>
+    </view>
+    <view id="28" parent="11" name="get_books_number_in_library">
+      <ObjectId>18150</ObjectId>
+      <StateNumber>1964</StateNumber>
+    </view>
+    <view id="29" parent="11" name="get_categories">
+      <ObjectId>18122</ObjectId>
+      <StateNumber>1957</StateNumber>
+    </view>
+    <view id="30" parent="11" name="get_libraries">
+      <ObjectId>18126</ObjectId>
+      <StateNumber>1958</StateNumber>
+    </view>
+    <view id="31" parent="11" name="get_publishers">
+      <ObjectId>18130</ObjectId>
+      <StateNumber>1959</StateNumber>
+    </view>
+    <view id="32" parent="11" name="get_publishers_with_books">
+      <ObjectId>18134</ObjectId>
+      <StateNumber>1960</StateNumber>
+    </view>
+    <column id="33" parent="17" name="author_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1853</StateNumber>
+      <SequenceName>libraries.author_author_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;author_author_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="34" parent="17" name="author_name">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1853</StateNumber>
+    </column>
+    <index id="35" parent="17" name="author_pkey">
+      <ObjectId>18026</ObjectId>
+      <ColNames>author_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="36" parent="17" name="author_author_name_key">
+      <ObjectId>18028</ObjectId>
+      <ColNames>author_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="17" name="author_pkey">
+      <ObjectId>18027</ObjectId>
+      <ColNames>author_id</ColNames>
+      <UnderlyingIndexName>author_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="38" parent="17" name="author_author_name_key">
+      <ObjectId>18029</ObjectId>
+      <ColNames>author_name</ColNames>
+      <UnderlyingIndexName>author_author_name_key</UnderlyingIndexName>
+    </key>
+    <column id="39" parent="18" name="book_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1857</StateNumber>
+      <SequenceName>libraries.book_book_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;book_book_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="40" parent="18" name="title">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1857</StateNumber>
+    </column>
+    <column id="41" parent="18" name="description">
+      <Position>3</Position>
+      <DataType>varchar(511)|0</DataType>
+      <StateNumber>1857</StateNumber>
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+    </column>
+    <column id="42" parent="18" name="year">
+      <Position>4</Position>
+      <DataType>smallint|0</DataType>
+      <StateNumber>1857</StateNumber>
+    </column>
+    <column id="43" parent="18" name="publisher_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1857</StateNumber>
+    </column>
+    <index id="44" parent="18" name="book_pkey">
+      <ObjectId>18071</ObjectId>
+      <ColNames>book_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="18" name="book_pkey">
+      <ObjectId>18072</ObjectId>
+      <ColNames>book_id</ColNames>
+      <UnderlyingIndexName>book_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="18" name="book_publisher_id_fkey">
+      <ObjectId>18073</ObjectId>
+      <ColNames>publisher_id</ColNames>
+      <RefTableId>18032</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>publisher</RefTableName>
+      <RefKeyName>publisher_pkey</RefKeyName>
+      <RefColNames>publisher_id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="47" parent="18" name="real_year">
+      <ObjectId>18067</ObjectId>
+      <ColNames>year</ColNames>
+      <Predicate>(year &gt; 0) AND (year &lt; 2100)</Predicate>
+    </check>
+    <column id="48" parent="19" name="book_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1859</StateNumber>
+    </column>
+    <column id="49" parent="19" name="author_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1859</StateNumber>
+    </column>
+    <index id="50" parent="19" name="book_author_pkey">
+      <ObjectId>18096</ObjectId>
+      <ColNames>book_id
+author_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="19" name="book_author_pkey">
+      <ObjectId>18097</ObjectId>
+      <ColNames>book_id
+author_id</ColNames>
+      <UnderlyingIndexName>book_author_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="52" parent="19" name="book_author_book_id_fkey">
+      <ObjectId>18098</ObjectId>
+      <ColNames>book_id</ColNames>
+      <RefTableId>18062</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>book</RefTableName>
+      <RefKeyName>book_pkey</RefKeyName>
+      <RefColNames>book_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="53" parent="19" name="book_author_author_id_fkey">
+      <ObjectId>18103</ObjectId>
+      <ColNames>author_id</ColNames>
+      <RefTableId>18022</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>author</RefTableName>
+      <RefKeyName>author_pkey</RefKeyName>
+      <RefColNames>author_id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="54" parent="20" name="book_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1858</StateNumber>
+    </column>
+    <column id="55" parent="20" name="category_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1858</StateNumber>
+    </column>
+    <index id="56" parent="20" name="book_category_pkey">
+      <ObjectId>18081</ObjectId>
+      <ColNames>book_id
+category_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="20" name="book_category_pkey">
+      <ObjectId>18082</ObjectId>
+      <ColNames>book_id
+category_id</ColNames>
+      <UnderlyingIndexName>book_category_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="20" name="book_category_book_id_fkey">
+      <ObjectId>18083</ObjectId>
+      <ColNames>book_id</ColNames>
+      <RefTableId>18062</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>book</RefTableName>
+      <RefKeyName>book_pkey</RefKeyName>
+      <RefColNames>book_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="59" parent="20" name="book_category_category_id_fkey">
+      <ObjectId>18088</ObjectId>
+      <ColNames>category_id</ColNames>
+      <RefTableId>18042</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>category</RefTableName>
+      <RefKeyName>category_pkey</RefKeyName>
+      <RefColNames>category_id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="60" parent="21" name="category_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1855</StateNumber>
+      <SequenceName>libraries.category_category_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;category_category_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="61" parent="21" name="category_name">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1855</StateNumber>
+    </column>
+    <index id="62" parent="21" name="category_pkey">
+      <ObjectId>18046</ObjectId>
+      <ColNames>category_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="21" name="category_category_name_key">
+      <ObjectId>18048</ObjectId>
+      <ColNames>category_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="21" name="category_pkey">
+      <ObjectId>18047</ObjectId>
+      <ColNames>category_id</ColNames>
+      <UnderlyingIndexName>category_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="65" parent="21" name="category_category_name_key">
+      <ObjectId>18049</ObjectId>
+      <ColNames>category_name</ColNames>
+      <UnderlyingIndexName>category_category_name_key</UnderlyingIndexName>
+    </key>
+    <column id="66" parent="22" name="library_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1856</StateNumber>
+      <SequenceName>libraries.library_library_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;library_library_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="67" parent="22" name="library_name">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1856</StateNumber>
+    </column>
+    <column id="68" parent="22" name="adress">
+      <Position>3</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1856</StateNumber>
+    </column>
+    <index id="69" parent="22" name="library_pkey">
+      <ObjectId>18056</ObjectId>
+      <ColNames>library_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="22" name="library_library_name_key">
+      <ObjectId>18058</ObjectId>
+      <ColNames>library_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="22" name="library_pkey">
+      <ObjectId>18057</ObjectId>
+      <ColNames>library_id</ColNames>
+      <UnderlyingIndexName>library_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="72" parent="22" name="library_library_name_key">
+      <ObjectId>18059</ObjectId>
+      <ColNames>library_name</ColNames>
+      <UnderlyingIndexName>library_library_name_key</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="23" name="library_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1860</StateNumber>
+    </column>
+    <column id="74" parent="23" name="book_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1860</StateNumber>
+    </column>
+    <column id="75" parent="23" name="nubmer_of_book">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1860</StateNumber>
+    </column>
+    <foreign-key id="76" parent="23" name="library_book_library_id_fkey">
+      <ObjectId>18112</ObjectId>
+      <ColNames>library_id</ColNames>
+      <RefTableId>18052</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>library</RefTableName>
+      <RefKeyName>library_pkey</RefKeyName>
+      <RefColNames>library_id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="77" parent="23" name="library_book_book_id_fkey">
+      <ObjectId>18117</ObjectId>
+      <ColNames>book_id</ColNames>
+      <RefTableId>18062</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>book</RefTableName>
+      <RefKeyName>book_pkey</RefKeyName>
+      <RefColNames>book_id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <check id="78" parent="23" name="positive_number">
+      <ObjectId>18111</ObjectId>
+      <ColNames>nubmer_of_book</ColNames>
+      <Predicate>nubmer_of_book &gt; 0</Predicate>
+    </check>
+    <column id="79" parent="24" name="publisher_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1854</StateNumber>
+      <SequenceName>libraries.publisher_publisher_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;publisher_publisher_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="80" parent="24" name="publisher_name">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1854</StateNumber>
+    </column>
+    <index id="81" parent="24" name="publisher_pkey">
+      <ObjectId>18036</ObjectId>
+      <ColNames>publisher_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="82" parent="24" name="publisher_publisher_name_key">
+      <ObjectId>18038</ObjectId>
+      <ColNames>publisher_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="83" parent="24" name="publisher_pkey">
+      <ObjectId>18037</ObjectId>
+      <ColNames>publisher_id</ColNames>
+      <UnderlyingIndexName>publisher_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="84" parent="24" name="publisher_publisher_name_key">
+      <ObjectId>18039</ObjectId>
+      <ColNames>publisher_name</ColNames>
+      <UnderlyingIndexName>publisher_publisher_name_key</UnderlyingIndexName>
+    </key>
+    <column id="85" parent="25" name="author_name">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1961</StateNumber>
+    </column>
+    <column id="86" parent="26" name="title">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1962</StateNumber>
+    </column>
+    <column id="87" parent="26" name="library_name">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1962</StateNumber>
+    </column>
+    <column id="88" parent="26" name="number">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1962</StateNumber>
+    </column>
+    <column id="89" parent="27" name="category_name">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1963</StateNumber>
+    </column>
+    <column id="90" parent="27" name="numberofbook">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1963</StateNumber>
+    </column>
+    <column id="91" parent="28" name="library_name">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1964</StateNumber>
+    </column>
+    <column id="92" parent="28" name="numberofbook">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1964</StateNumber>
+    </column>
+    <column id="93" parent="29" name="category_name">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1957</StateNumber>
+    </column>
+    <column id="94" parent="30" name="library_name">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1958</StateNumber>
+    </column>
+    <column id="95" parent="31" name="publisher_name">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <StateNumber>1959</StateNumber>
+    </column>
+    <column id="96" parent="32" name="publisher_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1960</StateNumber>
+    </column>
+    <column id="97" parent="32" name="array">
+      <Position>2</Position>
+      <DataType>varchar(127) []|0</DataType>
+      <StateNumber>1960</StateNumber>
+    </column>
+  </database-model>
+</dataSource>
